@@ -1,6 +1,8 @@
  #warmup2
- #use LS and CD to navigate
-#cd WEEK2/ASSIGNMENT-2
+ #cd Desktop
+ #cd python-intro-homework
+ #cd week-2
+ #cd assignment-2
 
 #date 
 # user input
