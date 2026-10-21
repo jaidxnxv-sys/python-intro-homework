@@ -6,6 +6,6 @@
 
 #date 
 # user input
-date = input("Enter the Date: ")
+date = input("What is today's Date: ")
 # print feedback 
 print(f"You said today is {date} ")   
