@@ -1,0 +1,36 @@
+    #activity planner 
+
+    #ask for day and time 
+day = input("What day is it? ").strip().lower()
+time = input("Time of day? ").strip().lower()
+
+# --suggestions--
+#monday 
+if day == "monday" and time == "morning":  
+     print("Morning Workout")
+elif day == "monday" and time == "noon":
+     print("Cook a healthy lunch")
+elif day == "monday" and time == "evening":
+     print("Study night")
+
+
+#teusday
+elif day == "tuesday" and time == "morning":
+     print("Write a short program")
+elif day == "tuesday" and time == "noon":
+     print("Quick exercise")
+elif day == "tuesday" and time == "evening":
+     print("Complete coding assignment")
+
+
+#wednesday 
+elif day == "wednesday" and time == "morning":
+     print("rest")
+elif day == "wednesday" and time == "noon":
+     print("Go for a walk")
+elif day == "wednesday" and time == "evening":
+     print("Relax and unwind")
+
+
+else:
+     print("Try a weekday, and morning, evening, or noon")
