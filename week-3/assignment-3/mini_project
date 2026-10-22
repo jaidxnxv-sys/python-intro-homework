@@ -24,9 +24,12 @@ elif day == "tuesday" and time == "evening":
 
 
 #wednesday 
-elif day == "wednesday" and time == ["morning", "evening", "noon"]:
+elif day == "wednesday" and time == "morning":
      print("rest")
-
+elif day == "wednesday" and time == "noon":
+     print("Go for a walk")
+elif day == "wednesday" and time == "evening":
+     print("Relax and unwind")
 
 
 else:

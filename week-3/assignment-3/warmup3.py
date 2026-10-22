@@ -4,11 +4,9 @@ print(not (5 > 3))
 print(10 == 10 and 4 != 4)
 print(not False or not True)
 ...
-False
-True
-False
-False
-True
+
+
+
 print(not True and False) #not true = false, and false is false.
 print(True or False and False) #python picks true from false and false.
 print(not (5 > 3)) #returns fasle because 5 is greater than 3.
