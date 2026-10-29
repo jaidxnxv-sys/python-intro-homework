@@ -6,7 +6,7 @@ first_item = num[0]
 print("the first item is: ",first_item)
 
 #index [7]
-last_item = num[7]
+last_item = num[-1]
 print("the last item is: ",last_item)
 
 #slice middle [4]
