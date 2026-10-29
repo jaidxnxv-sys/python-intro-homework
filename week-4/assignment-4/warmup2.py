@@ -3,7 +3,7 @@
 student_info = {
     "name": "Alice",
     "grade": "A",
-    "subject": ["Mathematics"],
+    "subject": ["Mathematics"]
 }
 
 #unpack tuples into their key and value
