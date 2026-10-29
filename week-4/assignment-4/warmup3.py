@@ -25,10 +25,9 @@ print("Full cousre list: ", union_list)
 matches = set1 & set2
 print("Matching courses: ", matches)
 
-#languages only on list 1
-print("list 1 courses:")
-for lang in set1:
-  print(lang)
+#difference
+difference = set1 - set2
+print("Q1 Courses:", difference)
 
 
 
