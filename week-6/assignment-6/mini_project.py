@@ -19,11 +19,10 @@ def find_max(lst):
             maximum = num
     return maximum
 
-def search_number(lst):
+def search(numbers, target):
     try:
-        target = int(input("Enter a number to search: "))
-        for i in range(len(lst)):
-            if lst[i] == target:
+        for i in range(len(numbers)):
+            if numbers[i] == target:
                 return i
         return -1
     except ValueError:
@@ -42,6 +41,15 @@ def display_menu():
     choice = input("Enter your choice (1-5): ")
     return choice
 
+def bubble_sort(numbers):
+    swapped = True
+    while swapped:
+        swapped = False
+        for i in range(len(numbers) - 1):
+            if numbers[i] > numbers[i + 1]:
+                numbers[i], numbers[i + 1] = numbers[i + 1], numbers[i]
+                swapped = True
+    print("Sorted List:", numbers)
 # Choice function
 def main():
     while True:
@@ -56,21 +64,15 @@ def main():
             print(f"The maximum number is: {option}")
         # 3 search lin
         elif choice == "3":
-            option = search_number(numbers)
+            target = int(input("Enter a number to search: "))
+            option = search(numbers, target)
             if option != -1:
                 print(f"Number found at index: {option}")
             else:
                 print("Number not found in the list.")
         # 4 bubble sort
         elif choice == "4":
-            swapped = True
-            while swapped:
-                swapped = False
-                for i in range(len(numbers) - 1):
-                    if numbers[i] > numbers[i + 1]:
-                        numbers[i], numbers[i + 1] = numbers[i + 1], numbers[i]
-                        swapped = True
-            print("Sorted List:", numbers)
+            bubble_sort(numbers)
         # 5 exit
         elif choice == "5":
             print("Exiting the program.")
