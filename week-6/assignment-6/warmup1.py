@@ -4,11 +4,11 @@ def greet(name):
 
 greet("Jaiden")
 
-def greet(name, greeting="How are you?"):
+def greet(name, greeting="Hello"):
   print(greeting + ", " + name + "!")
 
 
 
 greet("Jaiden")
 greet("Jaiden", "What's up")
-greet("Jaiden", greeting="Hello")
+greet("Jaiden", greeting="How are you?")

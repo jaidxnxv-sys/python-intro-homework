@@ -42,14 +42,15 @@ def display_menu():
     return choice
 
 def bubble_sort(numbers):
+    sorted_nums = numbers[:]
     swapped = True
     while swapped:
         swapped = False
-        for i in range(len(numbers) - 1):
-            if numbers[i] > numbers[i + 1]:
-                numbers[i], numbers[i + 1] = numbers[i + 1], numbers[i]
+        for i in range(len(sorted_nums) - 1):
+            if sorted_nums[i] > sorted_nums[i + 1]:
+                sorted_nums[i], sorted_nums[i + 1] = sorted_nums[i + 1], sorted_nums[i]
                 swapped = True
-    print("Sorted List:", numbers)
+    return sorted_nums
 # Choice function
 def main():
     while True:
@@ -72,7 +73,8 @@ def main():
                 print("Number not found in the list.")
         # 4 bubble sort
         elif choice == "4":
-            bubble_sort(numbers)
+            sorted_numbers = bubble_sort(numbers)
+            print(f"Sorted List: {sorted_numbers}")
         # 5 exit
         elif choice == "5":
             print("Exiting the program.")
