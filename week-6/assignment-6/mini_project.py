@@ -54,7 +54,7 @@ def bubble_sort(numbers):
 # Choice function
 def main():
     while True:
-        choice = display_menu()
+        choice = show_menu()
         # 1 min
         if choice == "1":
             option = find_min(numbers)
