@@ -1,4 +1,4 @@
-def between_0_and_100(score):
+def is_valid_score(score):
   #check
   if score >= 0 and score <= 100:
     return True
@@ -7,7 +7,7 @@ def between_0_and_100(score):
 
 
 score = int(input("Enter your score: "))
-if between_0_and_100(score):
+if is_valid_score(score):
   print("Valid Score")
 else:
   print("Invalid Score - Must be between 0 and 100")

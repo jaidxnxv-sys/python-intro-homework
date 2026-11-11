@@ -30,7 +30,7 @@ def search(numbers, target):
         return -1
 
 # User input/ display
-def display_menu():
+def show_menu():
     print("\n==== Number Cruncher ====")
     print("1. Find Minimum")
     print("2. Find Maximum")
