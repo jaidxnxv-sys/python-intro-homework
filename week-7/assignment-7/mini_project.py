@@ -36,3 +36,7 @@ with open("food_report.txt", "w") as report:
     report.write(f"{expense['date']}: ${expense["amount"]:.2f}\n")
 
   report.write(f"Total: ${total_food:.2f}\n")
+
+#connect and print report
+with open("food_report.txt", "r") as report:
+  print(report.read())
