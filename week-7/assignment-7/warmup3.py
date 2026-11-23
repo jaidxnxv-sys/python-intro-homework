@@ -6,9 +6,9 @@ print("Current working directory:", actv_dir)
 #check ../data/expenses/
 path = "../data/expenses.csv"
 if os.path.exists(path):
-    print("Path exists")
+    print("expenses.csv found.")
 else:
-    print("Path does not exist")
+    print("expenses.csv not found.")
 
 #os.path.join
 path = os.path.join("data", "expenses.csv")

@@ -29,7 +29,7 @@ total_food = sum(expense["amount"] for expense in food_expenses)
 today = datetime.today().strftime("%B %d, %Y")
 
 #write report
-with open("food_report.txt", "W") as report:
+with open("food_report.txt", "w") as report:
   report.write(f"Food Expense Report - generated {today}\n")
 
   for expense in food_expenses:
