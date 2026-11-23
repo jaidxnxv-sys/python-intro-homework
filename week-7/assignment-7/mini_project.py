@@ -35,4 +35,4 @@ with open("food_report.txt", "w") as report:
   for expense in food_expenses:
     report.write(f"{expense['date']}: ${expense["amount"]:.2f}\n")
 
-    report.write(f"Total: ${total_food:.2f}\n")
+  report.write(f"Total: ${total_food:.2f}\n")
