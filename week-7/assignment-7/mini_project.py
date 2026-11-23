@@ -38,7 +38,6 @@ with open("food_report.txt", "w") as report:
   report.write(f"Total: ${total_food:.2f}\n")
 
 #connect and print report
-# mini_project.py
 
 report = "Food Report\n"
 report += "Apples: 5\n"
