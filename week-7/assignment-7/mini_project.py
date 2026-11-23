@@ -37,5 +37,5 @@ with open("food_report.txt", "w") as report:
 
   report.write(f"Total: ${total_food:.2f}\n")
 
-#connect and print report
+
 print("food_report.txt generated successfully")
