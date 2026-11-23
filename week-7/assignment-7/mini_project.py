@@ -38,5 +38,13 @@ with open("food_report.txt", "w") as report:
   report.write(f"Total: ${total_food:.2f}\n")
 
 #connect and print report
-with open("food_report.txt", "r") as report:
-  print(report.read())
+# mini_project.py
+
+report = "Food Report\n"
+report += "Apples: 5\n"
+report += "Bananas: 3\n"
+
+with open("food_report.txt", "w") as file:
+    file.write(report)
+
+print("food_report.txt generated successfully")
