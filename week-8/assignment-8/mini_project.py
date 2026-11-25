@@ -1,4 +1,5 @@
 import csv
+from fileinput import filename
 
 valid_rows = []
 
@@ -41,9 +42,25 @@ for row in valid_rows:
 
 #summary of skipped rows
 rows_attempted = 0
+valid_rows = []
 skipped_rows = []
+    
+with open(filename, newline="") as file:
+    reader = csv.DictReader(file)
 
-for row in reader:
+    for row in reader:
+        rows_attempted += 1
+
+        try:
+            amount = float(row["amount"])
+        except ValueError:
+            skipped_rows.append(
+                f"Row {rows_attempted}: invalid amount -> {row}"
+            )
+            continue
+
+        valid_rows.append(row)
+'''for row in reader:
     rows_attempted += 1
 
     try:
@@ -52,7 +69,7 @@ for row in reader:
         skipped_rows.append(
             f"Row {rows_attempted}: invalid amount -> {row}"
         )
-        continue
+        continue'''
 
     # processed valid row
 print("\n--- SUMMARY ---")
