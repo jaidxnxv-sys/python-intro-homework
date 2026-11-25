@@ -45,7 +45,7 @@ rows_attempted = 0
 valid_rows = []
 skipped_rows = []
     
-with open(filename, newline="") as file:
+with open("../data/messy_data.csv", newline="") as file:
     reader = csv.DictReader(file)
 
     for row in reader:
