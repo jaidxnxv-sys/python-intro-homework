@@ -39,3 +39,29 @@ for row in valid_rows:
   print(row)
 
 
+#summary of skipped rows
+rows_attempted = 0
+skipped_rows = []
+
+for row in reader:
+    rows_attempted += 1
+
+    try:
+        amount = float(row["amount"])
+    except ValueError:
+        skipped_rows.append(
+            f"Row {rows_attempted}: invalid amount -> {row}"
+        )
+        continue
+
+    # processed valid row
+print("\n--- SUMMARY ---")
+print(f"Rows attempted: {rows_attempted}")
+print(f"Rows parsed: {len(valid_rows)}")
+print(f"Rows skipped: {len(skipped_rows)}")
+print(f"Total amount: ${total_amount:.2f}")
+
+if skipped_rows:
+    print("\nSkipped rows:")
+    for item in skipped_rows:
+        print(f"- {item}")
