@@ -60,16 +60,6 @@ with open("../data/messy_data.csv", newline="") as file:
             continue
 
         valid_rows.append(row)
-'''for row in reader:
-    rows_attempted += 1
-
-    try:
-        amount = float(row["amount"])
-    except ValueError:
-        skipped_rows.append(
-            f"Row {rows_attempted}: invalid amount -> {row}"
-        )
-        continue'''
 
     # processed valid row
 print("\n--- SUMMARY ---")
